@@ -1,0 +1,11 @@
+---
+
+- name: mac setup
+  hosts: localhost
+
+  tasks:
+  - name: Ping!
+    ping:
+
+  roles:
+  - install_brew
