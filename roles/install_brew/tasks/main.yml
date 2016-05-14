@@ -1,3 +1,16 @@
 - debug: msg="System {{ inventory_hostname }}"
 
-- homebrew: name=svn state=present
+- name: install brew packages
+  action: homebrew name={{item}} state=present
+  with_items:
+  - svn
+  - maven
+  - ant
+  - gradle
+  - sbt
+  - libxml2
+  - libxslt
+  - libyaml
+  - automake
+  - scala
+  - jruby

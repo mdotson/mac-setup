@@ -2,10 +2,26 @@
 
 - name: mac setup
   hosts: localhost
-
-  tasks:
-  - name: Ping!
-    ping:
-
+  vars:
+    homebrew_taps:
+      - caskroom/cask
+      - caskroom/versions
+    homebrew_cask_appdir: /Applications
+    homebrew_installed_packages:
+      - svn
+      - maven
+      - ant
+      - gradle
+      - sbt
+      - libxml2
+      - libxslt
+      - libyaml
+      - automake
+      - scala
+      - jruby
+    homebrew_cask_apps:
+      - firefox
+      - java7
+      - java
   roles:
-  - install_brew
+    - { role: geerlingguy.homebrew }
