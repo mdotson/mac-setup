@@ -25,6 +25,7 @@
       - postgres
     homebrew_cask_apps:
       - firefox
+      - google-chrome
       - java7
       - java
       - intellij-idea
@@ -36,5 +37,11 @@
       - spotify
       - evernote
       - dropbox
+      - adobe-creative-cloud
+      - adobe-illustrator-cc
+      - adobe-photoshop-cc
+      - microsoft-office-2011
+      - iterm2
+      - xquartz
   roles:
     - { role: geerlingguy.homebrew }
