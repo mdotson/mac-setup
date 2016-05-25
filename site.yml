@@ -23,6 +23,7 @@
       - zsh
       - zsh-completions
       - postgres
+      - docker
     homebrew_cask_apps:
       - firefox
       - google-chrome
