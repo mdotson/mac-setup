@@ -1,5 +1,4 @@
 ---
-
 - name: mac setup
   hosts: localhost
   vars:
@@ -25,6 +24,7 @@
       - postgres
       - docker
       - docker-machine
+      - the_silver_searcher
     homebrew_cask_apps:
       - firefox
       - google-chrome
@@ -40,10 +40,12 @@
       - evernote
       - dropbox
       - adobe-creative-cloud
-      - adobe-illustrator-cc
+      # - adobe-illustrator-cc
       - adobe-photoshop-cc
       - microsoft-office-2011
       - iterm2
       - xquartz
+      - disk-drill
   roles:
     - { role: geerlingguy.homebrew }
+    - install_oh_my_zsh
