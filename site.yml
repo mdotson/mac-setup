@@ -24,6 +24,7 @@
       - postgres
       - docker
       - docker-machine
+      - docker-compose
       - the_silver_searcher
     homebrew_cask_apps:
       - firefox
