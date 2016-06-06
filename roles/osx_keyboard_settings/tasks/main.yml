@@ -1,0 +1,8 @@
+---
+- name: Blazingly fast keyboard repeat rate
+  command:
+    defaults write NSGlobalDomain KeyRepeat -int 0
+
+- name: Set a shorter delay until key repeat
+  command:
+    defaults write NSGlobalDomain InitialKeyRepeat -int 15

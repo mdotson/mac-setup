@@ -26,6 +26,8 @@
       - docker-machine
       - docker-compose
       - the_silver_searcher
+      - elasticsearch
+      - tree
     homebrew_cask_apps:
       - firefox
       - google-chrome
@@ -41,7 +43,6 @@
       - evernote
       - dropbox
       - adobe-creative-cloud
-      # - adobe-illustrator-cc
       - adobe-photoshop-cc
       - microsoft-office-2011
       - iterm2
@@ -50,3 +51,4 @@
   roles:
     - { role: geerlingguy.homebrew }
     - install_oh_my_zsh
+    - osx_keyboard_setings
