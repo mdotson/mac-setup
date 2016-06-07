@@ -28,6 +28,10 @@
       - the_silver_searcher
       - elasticsearch
       - tree
+      - csshx
+      - git-lfs
+      - imagemagick
+      - rabbitmq
     homebrew_cask_apps:
       - firefox
       - google-chrome
@@ -48,6 +52,7 @@
       - iterm2
       - xquartz
       - disk-drill
+      - vagrant
   roles:
     - { role: geerlingguy.homebrew }
     - install_oh_my_zsh
