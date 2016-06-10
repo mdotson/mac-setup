@@ -33,6 +33,7 @@
       - imagemagick
       - rabbitmq
       - ssh-copy-id
+      - md5sha1sum
     homebrew_cask_apps:
       - firefox
       - google-chrome
