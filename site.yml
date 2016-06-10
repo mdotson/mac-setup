@@ -32,6 +32,7 @@
       - git-lfs
       - imagemagick
       - rabbitmq
+      - ssh-copy-id
     homebrew_cask_apps:
       - firefox
       - google-chrome
