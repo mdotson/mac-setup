@@ -6,3 +6,7 @@
 - name: Set a shorter delay until key repeat
   command:
     defaults write NSGlobalDomain InitialKeyRepeat -int 15
+
+- name: Put dock on right side of screen
+  command:
+    defaults write com.apple.dock orientation right && killall Dock

@@ -51,4 +51,4 @@
   roles:
     - { role: geerlingguy.homebrew }
     - install_oh_my_zsh
-    - osx_keyboard_setings
+    - osx_keyboard_settings
