@@ -1,0 +1,11 @@
+- name: Clone Powerline fonts repo
+  git: clone=true repo=https://github.com/powerline/fonts.git dest="~/fonts" update=no
+ 
+- name: Install Powerline fonts
+  shell: "~/fonts/install.sh"
+
+- name: Set agnoster theme in zshrc
+  shell: "sed -i.bu 's/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"agnoster\"/' ~/.zshrc"
+
+- name: Get solarized color scheme
+  git: clone=true repo=https://github.com/altercation/solarized.git dest="~/colors" update=no

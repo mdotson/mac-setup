@@ -1,62 +1,16 @@
 ---
 - name: mac setup
   hosts: localhost
+  vars_files:
+    - vars/homebrew_vars.yml
   vars:
     homebrew_taps:
       - caskroom/cask
       - caskroom/versions
     homebrew_cask_appdir: /Applications
     homebrew_upgrade_all_packages: yes
-    homebrew_installed_packages:
-      - svn
-      - maven
-      - ant
-      - gradle
-      - sbt
-      - libxml2
-      - libxslt
-      - libyaml
-      - automake
-      - scala
-      - jruby
-      - zsh
-      - zsh-completions
-      - postgres
-      - docker
-      - docker-machine
-      - docker-compose
-      - the_silver_searcher
-      - elasticsearch
-      - tree
-      - csshx
-      - git-lfs
-      - imagemagick
-      - rabbitmq
-      - ssh-copy-id
-      - md5sha1sum
-      - groovy
-    homebrew_cask_apps:
-      - firefox
-      - google-chrome
-      - java7
-      - java
-      - intellij-idea
-      - skype
-      - slack
-      - vagrant
-      - virtualbox
-      - puppet
-      - spotify
-      - evernote
-      - dropbox
-      - adobe-creative-cloud
-      - adobe-photoshop-cc
-      - microsoft-office-2011
-      - iterm2
-      - xquartz
-      - disk-drill
-      - vagrant
   roles:
     - { role: geerlingguy.homebrew }
     - install_oh_my_zsh
     - osx_keyboard_settings
+    - agnoster
