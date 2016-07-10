@@ -1,11 +1,19 @@
+---
 - name: Clone Powerline fonts repo
-  git: clone=true repo=https://github.com/powerline/fonts.git dest="~/fonts" update=no
+  git:
+    clone=true
+    repo=https://github.com/powerline/fonts.git
+    dest="~/fonts"
+    update=no
+  register: cloning
  
 - name: Install Powerline fonts
   shell: "~/fonts/install.sh"
+  when: cloning.changed
 
 - name: Set agnoster theme in zshrc
-  shell: "sed -i.bu 's/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"agnoster\"/' ~/.zshrc"
+  lineinfile:
+    dest=~/.zshrc
+    regexp=^ZSH_THEME=
+    line="ZSH_THEME=\"agnoster\""
 
-- name: Get solarized color scheme
-  git: clone=true repo=https://github.com/altercation/solarized.git dest="~/colors" update=no

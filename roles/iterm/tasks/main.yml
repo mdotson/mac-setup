@@ -1,0 +1,5 @@
+---
+- name: copy iterm profile to dynamic loading directory
+  copy:
+    src=roles/iterm/files/profile
+    dest='~/Library/Application Support/iTerm2/DynamicProfiles/profile'
