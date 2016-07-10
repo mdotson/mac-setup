@@ -27,6 +27,7 @@ homebrew_installed_packages:
   - ssh-copy-id
   - md5sha1sum
   - groovy
+  - nmap
 
 homebrew_cask_apps:
   - firefox
