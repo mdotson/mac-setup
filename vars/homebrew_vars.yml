@@ -1,5 +1,6 @@
 ---
 homebrew_installed_packages:
+  - git
   - svn
   - maven
   - ant
@@ -28,6 +29,9 @@ homebrew_installed_packages:
   - md5sha1sum
   - groovy
   - nmap
+  - wget
+  - go
+  - node
 
 homebrew_cask_apps:
   - firefox
