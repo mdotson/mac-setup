@@ -3,10 +3,8 @@
   git:
     repo=https://github.com/robbyrussell/oh-my-zsh
     dest=~/.oh-my-zsh
-  register: cloning
 
 - name: Creating new ~/.zshrc
   copy:
-    src=~/.oh-my-zsh/templates/zshrc.zsh-template
+    src=zshrc
     dest=~/.zshrc
-  when: cloning|success

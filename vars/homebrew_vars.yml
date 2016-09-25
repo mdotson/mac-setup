@@ -32,6 +32,7 @@ homebrew_installed_packages:
   - wget
   - go
   - node
+  - cdiff
 
 homebrew_cask_apps:
   - firefox
