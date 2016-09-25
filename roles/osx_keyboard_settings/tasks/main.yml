@@ -1,12 +1,14 @@
 ---
-- name: Blazingly fast keyboard repeat rate
-  command:
-    defaults write NSGlobalDomain KeyRepeat -int 0
+- name: Set a faster key repeat rate
+  osx_defaults: domain=NSGlobalDomain key=KeyRepeat type=int value=0
 
 - name: Set a shorter delay until key repeat
-  command:
-    defaults write NSGlobalDomain InitialKeyRepeat -int 15
+  osx_defaults: domain=NSGlobalDomain key=InitialKeyRepeat type=int value=15
 
 - name: Put dock on right side of screen
-  shell:
-    defaults write com.apple.dock orientation right && killall Dock
+  osx_defaults: domain=com.apple.dock key=orientation type=string value=right
+  register: dock
+
+- name: restart dock if changed
+  shell: killall Dock
+  when: dock.changed
