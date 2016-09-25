@@ -1,8 +1,8 @@
-sudo easy\_install pip  
-sudo easy\_install ansible  
+python get-pip.py
+pip install ansible
 sudo easy\_install -U setuptools  
 
-sudo ansible-galaxy install geerlingguy.homebrew
+ansible-galaxy install geerlingguy.homebrew
 
 If that last command fails, we need xcode:
 xcode-select --install

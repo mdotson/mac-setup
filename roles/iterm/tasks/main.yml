@@ -3,3 +3,12 @@
   copy:
     src=roles/iterm/files/profile
     dest='~/Library/Application Support/iTerm2/DynamicProfiles/profile'
+
+- name: Set default profile
+  osx_defaults:
+    domain=com.googlecode.iterm2
+    key="Default Bookmark Guid"
+    type=string
+    value="AB731DBC-9439-4C04-8E8C-D635119C90B9"
+    state=present
+
