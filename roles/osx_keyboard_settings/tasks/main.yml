@@ -1,4 +1,12 @@
 ---
+- name: Show hidden files in finder
+  osx_defaults:
+    domain=com.apple.finder
+    key=AppleShowAllFiles
+    type=bool
+    value=true
+    state=present
+
 - name: Set a faster key repeat rate
   osx_defaults: domain=NSGlobalDomain key=KeyRepeat type=int value=0
 
