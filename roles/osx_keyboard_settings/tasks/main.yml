@@ -5,7 +5,6 @@
     key=AppleShowAllFiles
     type=bool
     value=true
-    state=present
 
 - name: Set a faster key repeat rate
   osx_defaults: domain=NSGlobalDomain key=KeyRepeat type=int value=0
@@ -13,8 +12,15 @@
 - name: Set a shorter delay until key repeat
   osx_defaults: domain=NSGlobalDomain key=InitialKeyRepeat type=int value=15
 
-- name: Put dock on right side of screen
-  osx_defaults: domain=com.apple.dock key=orientation type=string value=right
+- name: Change dock settings
+  osx_defaults:
+    domain=com.apple.dock
+    key={{ item.key }}
+    type={{ item.type }}
+    value={{ item.value }}
+  with_items:
+    - { key: 'orientation', type: 'string', value: 'right' }
+    - { key: 'autohide', type: 'bool', value: 'true' }
   register: dock
 
 - name: restart dock if changed
