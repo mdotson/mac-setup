@@ -8,3 +8,10 @@
   copy:
     src=zshrc
     dest=~/.zshrc
+
+- name: set user's shell
+  user:
+    name=mdotson
+    shell=/bin/zsh
+  become: true
+  become_method: sudo

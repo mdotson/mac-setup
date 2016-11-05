@@ -8,7 +8,7 @@
       - caskroom/cask
       - caskroom/versions
     homebrew_cask_appdir: /Applications
-    homebrew_upgrade_all_packages: yes
+    homebrew_upgrade_all_packages: no
   roles:
     - { role: geerlingguy.homebrew }
     - zsh
