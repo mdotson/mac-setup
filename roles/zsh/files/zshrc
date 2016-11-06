@@ -87,8 +87,7 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=vim
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
+export DEV=~/dev
 
 alias ll='ls -la'
 
-alias startes="elasticsearch -d"
-alias stopes="curl -XPOST 'http://localhost:9200/_shutdown'"

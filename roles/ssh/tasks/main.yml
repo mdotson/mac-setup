@@ -1,0 +1,9 @@
+---
+- name: check if ssh key exists
+  shell: ssh-keygen -t rsa -b 4096 -C "michael.r.dotson@gmail.com" -f ~/.ssh/personal_email_rsa -N ''
+  args:
+    creates: ~/.ssh/personal_email_rsa
+
+- name: add ssh keys
+  authorized_key: user=mdotson key="{{ lookup('file', '~/.ssh/personal_email_rsa.pub') }}"
+
