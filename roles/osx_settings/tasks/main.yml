@@ -12,6 +12,15 @@
 - name: Set a shorter delay until key repeat
   osx_defaults: domain=NSGlobalDomain key=InitialKeyRepeat type=int value=15
 
+- name: Read custom keys
+  command: defaults read com.apple.finder NSUserKeyEquivalents
+  changed_when: false
+  register: custom_keys
+
+- name: write custom keys
+  command: defaults write com.apple.finder NSUserKeyEquivalents -dict "\\033File\\033New Finder Window" "@\$n" "\\033File\\033New Folder" "@n"
+  when: "'New Folder' not in custom_keys.stdout or 'New Finder Window' not in custom_keys.stdout"
+
 - name: Change dock settings
   osx_defaults:
     domain=com.apple.dock
