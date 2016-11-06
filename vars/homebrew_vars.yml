@@ -33,6 +33,7 @@ homebrew_installed_packages:
   - go
   - node
   - cdiff
+  - jq
 
 homebrew_cask_apps:
   - firefox
