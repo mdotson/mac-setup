@@ -1,0 +1,16 @@
+---
+- name: clone amix/vimrc
+  git:
+    repo=https://github.com/amix/vimrc
+    dest=~/.vim_runtime
+    update=no
+  register: cloning
+
+- name: change permissions on install_awesome_vimrc.sh
+  file:
+    path=~/.vim_runtime/install_awesome_vimrc.sh
+    mode=0744
+
+- name: run installation of amix/vimrc awesome version
+  shell: ~/.vim_runtime/install_awesome_vimrc.sh
+  when: cloning.changed
