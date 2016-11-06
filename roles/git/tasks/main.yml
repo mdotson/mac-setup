@@ -1,0 +1,10 @@
+---
+- name: ensures .config/git directory exists
+  file:
+    path=~/.config/git
+    recurse=yes
+    state=directory
+- name: add global gitignore
+  copy:
+    src=gitignore
+    dest=~/.config/git/ignore

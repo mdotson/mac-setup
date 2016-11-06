@@ -12,6 +12,8 @@
   roles:
     - { role: geerlingguy.homebrew }
     - zsh
-    - osx_keyboard_settings
+    - osx_settings
     - agnoster
     - iterm
+    - git
+
