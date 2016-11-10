@@ -1,6 +1,6 @@
-python get-pip.py
+sudo easy\_install pip
 pip install ansible
-sudo easy\_install -U setuptools  
+pip install setuptools  
 
 ansible-galaxy install geerlingguy.homebrew
 

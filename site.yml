@@ -11,6 +11,7 @@
     homebrew_upgrade_all_packages: no
   roles:
     - { role: geerlingguy.homebrew }
+    - pip
     - zsh
     - osx_settings
     - agnoster
