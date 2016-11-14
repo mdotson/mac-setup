@@ -2,7 +2,7 @@ sudo easy\_install pip
 pip install ansible
 pip install setuptools  
 
-ansible-galaxy install geerlingguy.homebrew
+ansible-galaxy install geerlingguy.homebrew --roles-path .
 
 If that last command fails, we need xcode:
 xcode-select --install
