@@ -19,7 +19,6 @@ homebrew_installed_packages:
   - docker-machine
   - docker-compose
   - the_silver_searcher
-  - elasticsearch
   - tree
   - csshx
   - git-lfs
