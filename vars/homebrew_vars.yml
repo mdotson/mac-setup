@@ -45,13 +45,12 @@ homebrew_cask_apps:
   - slack
   - vagrant
   - virtualbox
-  - puppet
   - spotify
   - evernote
   - dropbox
   - adobe-creative-cloud
   - adobe-photoshop-cc
-  - microsoft-office-2011
+  - microsoft-office
   - iterm2
   - xquartz
   - disk-drill
