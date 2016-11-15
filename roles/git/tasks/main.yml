@@ -2,17 +2,19 @@
 - name: ensures .config/git directory exists
   file:
     path=~/.config/git
-    recurse=yes
     state=directory
+
 - name: add global gitignore
   copy:
     src=gitignore
     dest=~/.config/git/ignore
+
 - name: add user.name to git config
   git_config:
     name=user.name
     scope=global
     value="Michael Dotson"
+
 - name: add user.email to git config
   git_config:
     name=user.email
