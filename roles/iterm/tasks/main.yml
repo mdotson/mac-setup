@@ -1,4 +1,8 @@
 ---
+- name: create directory for dynamic loading
+  path='~/Library/Application Support/iTerm2/DynamicProfiles'
+  state=directory
+
 - name: copy iterm profile to dynamic loading directory
   copy:
     src=roles/iterm/files/profile

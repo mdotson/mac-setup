@@ -13,10 +13,10 @@
     - { role: geerlingguy.homebrew }
     - pip
     - zsh
-    - osx_settings
     - agnoster
     - iterm
     - git
     - vim
+    - osx_settings
     - ssh
 
