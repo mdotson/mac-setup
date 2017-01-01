@@ -1,6 +1,6 @@
 # Prerequisites
 ```
-sudo easy\_install pip
+sudo easy_install pip
 pip install ansible
 pip install setuptools
 ansible-galaxy install geerlingguy.homebrew
