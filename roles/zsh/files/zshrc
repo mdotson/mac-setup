@@ -98,7 +98,7 @@ function kafkap {
   if [ -z "$1" ]; then
     echo "Pass topic as argument to this function"
   else
-    kafka-console-producer --broker-list kafka:9092 --topic $1
+    kafka-console-producer --broker-list 192.168.99.100:9092 --topic $1
   fi
 }
 
@@ -106,7 +106,7 @@ function kafkac {
   if [ -z "$1" ]; then
     echo "Pass topic as argument to this function"
   else
-    kafka-console-consumer --zookeeper localhost:2181 --topic $1
+    kafka-console-consumer --zookeeper 192.168.99.100:2181 --topic $1
   fi
 }
 
@@ -121,3 +121,6 @@ function dm {
 function nodm {
   unset DOCKER_TLS_VERIFY DOCKER_HOST DOCKER_CERT_PATH DOCKER_MACHINE_NAME
 }
+
+# execute commands
+dm
