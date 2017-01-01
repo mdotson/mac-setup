@@ -15,9 +15,6 @@ homebrew_installed_packages:
   - zsh
   - zsh-completions
   - postgres
-  - docker
-  - docker-machine
-  - docker-compose
   - the_silver_searcher
   - tree
   - csshx
@@ -36,6 +33,7 @@ homebrew_installed_packages:
   - python
 
 homebrew_cask_apps:
+  - docker
   - firefox
   - google-chrome
   - java7

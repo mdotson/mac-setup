@@ -90,4 +90,34 @@ export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 export DEV=~/dev
 
 alias ll='ls -la'
+alias dclean='docker rm -f $(docker ps -a -q)'
+alias dmnew='docker-machine create -d virtualbox --virtualbox-memory=4096 --virtualbox-cpu-count=2 dev'
+alias dmrm='docker-machine rm -f dev'
 
+function kafkap {
+  if [ -z "$1" ]; then
+    echo "Pass topic as argument to this function"
+  else
+    kafka-console-producer --broker-list kafka:9092 --topic $1
+  fi
+}
+
+function kafkac {
+  if [ -z "$1" ]; then
+    echo "Pass topic as argument to this function"
+  else
+    kafka-console-consumer --zookeeper localhost:2181 --topic $1
+  fi
+}
+
+function dm {
+  exists=`docker-machine ls | grep dev`
+  if [ -z "$exists" ]; then
+    dmnew
+  fi
+  eval "$(docker-machine env dev)"
+}
+
+function nodm {
+  unset DOCKER_TLS_VERIFY DOCKER_HOST DOCKER_CERT_PATH DOCKER_MACHINE_NAME
+}
