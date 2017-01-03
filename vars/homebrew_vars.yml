@@ -1,5 +1,6 @@
 ---
 homebrew_installed_packages:
+  - coreutils
   - git
   - svn
   - maven
