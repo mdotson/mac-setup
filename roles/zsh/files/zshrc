@@ -93,6 +93,7 @@ alias ll='ls -la'
 alias dclean='docker rm -f $(docker ps -a -q)'
 alias dmnew='docker-machine create -d virtualbox --virtualbox-memory=4096 --virtualbox-cpu-count=2 dev'
 alias dmrm='docker-machine rm -f dev'
+alias timeout=gtimeout
 
 function kafkap {
   if [ -z "$1" ]; then
