@@ -101,7 +101,8 @@ alias dmrm='docker-machine rm -f $DOCKER_MACHINE_NAME'
 alias dmip='docker-machine ip $DOCKER_MACHINE_NAME'
 alias dmupgrade='docker-machine upgrade $dmname'
 alias timeout=gtimeout
-alias conup='dm && docker-compose -f ~/confluent-docker/docker-compose.yml up'
+alias conup='dm && docker-compose -f ~/confluent-docker/docker-compose.yml up -d'
+alias condown='dm && docker-compose -f ~/confluent-docker/docker-compose.yml down -v'
 
 # functions 
 function dm {
