@@ -88,17 +88,19 @@ export EDITOR=vim
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 export DEV=~/dev
+export DOCKER_MACHINE_NAME="dev"
 
 alias ll='ls -la'
 alias dclean='docker rm -f $(docker ps -a -q)'
-alias dmnew='docker-machine create -d virtualbox --virtualbox-memory=4096 --virtualbox-cpu-count=2 dev'
-alias dmrm='docker-machine rm -f dev'
+alias dmnew='docker-machine create -d virtualbox --virtualbox-memory=4096 --virtualbox-cpu-count=2 $DOCKER_MACHINE_NAME'
+alias dmrm='docker-machine rm -f $DOCKER_MACHINE_NAME'
+alias dmip='docker-machine ip $DOCKER_MACHINE_NAME'
 
 function kafkap {
   if [ -z "$1" ]; then
     echo "Pass topic as argument to this function"
   else
-    kafka-console-producer --broker-list 192.168.99.100:9092 --topic $1
+    kafka-console-producer --broker-list `dmip`:9092 --topic $1
   fi
 }
 
@@ -106,16 +108,21 @@ function kafkac {
   if [ -z "$1" ]; then
     echo "Pass topic as argument to this function"
   else
-    kafka-console-consumer --zookeeper 192.168.99.100:2181 --topic $1
+    kafka-console-consumer --zookeeper `dmip`:2181 --topic $1
   fi
 }
 
 function dm {
-  exists=`docker-machine ls | grep dev`
+  dmname=$DOCKER_MACHINE_NAME
+  exists=`docker-machine ls | grep $dmname`
   if [ -z "$exists" ]; then
     dmnew
   fi
-  eval "$(docker-machine env dev)"
+  running=`docker-machine status $dmname`
+  if [ "${running}" != "Running" ]; then
+    docker-machine start $dmname
+  fi
+  eval "$(docker-machine env $dmname)"
 }
 
 function nodm {
