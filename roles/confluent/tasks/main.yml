@@ -1,0 +1,6 @@
+---
+- name: Cloning confluent docker images
+  git:
+    repo=https://github.com/mdotson/confluent-docker
+    dest=~/confluent-docker
+

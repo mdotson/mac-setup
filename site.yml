@@ -12,6 +12,7 @@
   roles:
     - { role: geerlingguy.homebrew }
     - pip
+    - confluent
     - zsh
     - agnoster
     - iterm
