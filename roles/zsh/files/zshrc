@@ -95,6 +95,7 @@ alias dclean='docker rm -f $(docker ps -a -q)'
 alias dmnew='docker-machine create -d virtualbox --virtualbox-memory=4096 --virtualbox-cpu-count=2 $DOCKER_MACHINE_NAME'
 alias dmrm='docker-machine rm -f $DOCKER_MACHINE_NAME'
 alias dmip='docker-machine ip $DOCKER_MACHINE_NAME'
+alias timeout=gtimeout
 
 function kafkap {
   if [ -z "$1" ]; then
