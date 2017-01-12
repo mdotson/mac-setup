@@ -90,7 +90,6 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 export DEV=~/dev
 export DOCKER_MACHINE_NAME="dev"
-export DOCKERHOST="localhost"
 
 # aliases
 alias ll='ls -la'
@@ -121,7 +120,7 @@ function dm {
 
 function nodm {
   unset DOCKER_TLS_VERIFY DOCKER_HOST DOCKER_CERT_PATH DOCKER_MACHINE_NAME
-  DOCKERHOST=localhost
+  DOCKERHOST=`ipconfig getifaddr en0`
 }
 
 function kafkap {
