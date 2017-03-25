@@ -8,7 +8,7 @@
       - caskroom/cask
       - caskroom/versions
     homebrew_cask_appdir: /Applications
-    homebrew_upgrade_all_packages: no
+    homebrew_upgrade_all_packages: yes
   roles:
     - { role: geerlingguy.homebrew }
     - pip
