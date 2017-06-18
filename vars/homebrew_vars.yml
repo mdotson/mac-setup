@@ -34,10 +34,11 @@ homebrew_installed_packages:
   - python
 
 homebrew_cask_apps:
+  - iterm2
   - docker
   - firefox
   - google-chrome
-  - java7
+  - java
   - java
   - intellij-idea
   - skype
@@ -49,9 +50,8 @@ homebrew_cask_apps:
   - dropbox
   - adobe-creative-cloud
   - adobe-photoshop-cc
+  - adobe-photoshop-lightroom-cc
   - microsoft-office
-  - iterm2
   - xquartz
   - disk-drill
   - vagrant
-  - google-earth
