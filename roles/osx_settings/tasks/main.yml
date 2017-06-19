@@ -13,7 +13,7 @@
   osx_defaults: domain=NSGlobalDomain key=InitialKeyRepeat type=int value=15
 
 - name: Read custom keys
-  command: defaults read com.apple.finder NSUserKeyEquivalents
+  shell: defaults read com.apple.finder NSUserKeyEquivalents || echo
   changed_when: false
   register: custom_keys
 

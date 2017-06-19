@@ -50,7 +50,7 @@ homebrew_cask_apps:
   - dropbox
   - adobe-creative-cloud
   - adobe-photoshop-cc
-  - adobe-photoshop-lightroom-cc
+  - adobe-photoshop-lightroom
   - microsoft-office
   - xquartz
   - disk-drill
