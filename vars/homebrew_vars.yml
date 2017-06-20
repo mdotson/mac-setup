@@ -49,8 +49,6 @@ homebrew_cask_apps:
   - evernote
   - dropbox
   - adobe-creative-cloud
-  - adobe-photoshop-cc
-  - adobe-photoshop-lightroom
   - microsoft-office
   - xquartz
   - disk-drill
