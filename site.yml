@@ -5,8 +5,8 @@
     - vars/homebrew_vars.yml
   vars:
     homebrew_taps:
-      - caskroom/cask
-      - caskroom/versions
+      - homebrew/cask
+      - homebrew/cask-versions
     homebrew_cask_appdir: /Applications
     homebrew_upgrade_all_packages: yes
   roles:
