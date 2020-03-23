@@ -11,7 +11,7 @@
 
 - name: set user's shell
   user:
-    name=mdotson
-    shell=/bin/zsh
+    name: "{{ user }}"
+    shell: /bin/zsh
   become: true
   become_method: sudo
