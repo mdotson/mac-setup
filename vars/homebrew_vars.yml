@@ -32,6 +32,9 @@ homebrew_installed_packages:
   - cdiff
   - jq
   - python
+  - pre-commit
+  - nvm
+  - awscli
 
 homebrew_cask_apps:
   - iterm2
