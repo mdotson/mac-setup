@@ -90,6 +90,9 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 export DEV=~/dev
 export DOCKER_MACHINE_NAME="dev"
+export NVM_DIR=~/.nvm
+
+source $(brew --prefix nvm)/nvm.sh
 
 # aliases
 alias ll='ls -la'
