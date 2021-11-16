@@ -1,8 +1,9 @@
 # Prerequisites
 ```
-java -version
-sudo easy_install pip
-sudo pip install ansible
+download homebrew
+brew install java
+download pip
+sudo pip3 install ansible
 sudo ansible-galaxy install geerlingguy.homebrew
 ```
 

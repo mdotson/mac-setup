@@ -23,7 +23,6 @@ homebrew_installed_packages:
   - imagemagick
   - rabbitmq
   - ssh-copy-id
-  - md5sha1sum
   - groovy
   - nmap
   - wget
@@ -36,23 +35,20 @@ homebrew_installed_packages:
   - nvm
   - awscli
   - postgresql
+  - java11
 
 homebrew_cask_apps:
   - iterm2
+  - authy
   - docker
   - firefox
   - google-chrome
-  - java
-  - java
   - intellij-idea
   - skype
   - slack
-  - vagrant
   - spotify
   - evernote
   - dropbox
-  - adobe-creative-cloud
   - microsoft-office
   - xquartz
-  - vagrant
   - postman
