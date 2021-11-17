@@ -105,6 +105,8 @@ alias dmupgrade='docker-machine upgrade $dmname'
 alias timeout=gtimeout
 alias conup='dm && docker-compose -f ~/confluent-docker/docker-compose.yml up -d'
 alias condown='dm && docker-compose -f ~/confluent-docker/docker-compose.yml down -v'
+alias java8='jdk 1.8'
+alias java11='jdk 11'
 
 # functions 
 function dm {
@@ -140,6 +142,12 @@ function kafkac {
   else
     kafka-console-consumer --bootstrap-server $DOCKERHOST:9092--topic $1
   fi
+}
+
+jdk() {
+  version=$1
+  export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
+  java -version
 }
 
 # execute commands

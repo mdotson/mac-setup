@@ -35,7 +35,6 @@ homebrew_installed_packages:
   - nvm
   - awscli
   - postgresql
-  - java11
 
 homebrew_cask_apps:
   - iterm2
@@ -52,3 +51,5 @@ homebrew_cask_apps:
   - microsoft-office
   - xquartz
   - postman
+  - temurin8
+  - temurin11
