@@ -51,7 +51,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx ant brew docker docker-compose gradle mvn sbt scala)
+plugins=(git macos ant brew docker docker-compose gradle mvn sbt scala)
 
 source $ZSH/oh-my-zsh.sh
 
