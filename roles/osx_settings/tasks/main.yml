@@ -30,6 +30,12 @@
   command: defaults write com.apple.finder NSUserKeyEquivalents -dict "\\033File\\033New Finder Window" "@\$n" "\\033File\\033New Folder" "@n"
   when: "'New Folder' not in custom_keys.stdout or 'New Finder Window' not in custom_keys.stdout"
 
+- name: change preferred view style
+  osx_defaults: domain=com.apple.finder key=FXPreferredViewStyle type=string value=clmv
+
+- name: change recents view style
+  osx_defaults: domain=com.apple.finder key=SearchRecentsSavedViewStyle type=string value=clmv
+
 - name: Change dock settings
   osx_defaults:
     domain=com.apple.dock
