@@ -2,9 +2,9 @@
 ```
 download homebrew
 brew install java
-download pip
-sudo pip3 install ansible
-sudo ansible-galaxy install geerlingguy.homebrew
+brew install python
+pip3 install ansible
+ansible-galaxy collection install geerlingguy.mac
 ```
 
 # Run:

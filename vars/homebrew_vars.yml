@@ -15,7 +15,7 @@ homebrew_installed_packages:
   - jruby
   - zsh
   - zsh-completions
-  - postgres
+  - postgres@15
   - the_silver_searcher
   - tree
   - csshx
