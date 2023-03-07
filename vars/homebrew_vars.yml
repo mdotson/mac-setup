@@ -43,6 +43,7 @@ homebrew_cask_apps:
   - firefox
   - google-chrome
   - intellij-idea
+  - intellij-idea-ce
   - skype
   - slack
   - spotify
