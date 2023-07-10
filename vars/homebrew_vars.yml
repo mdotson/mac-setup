@@ -53,3 +53,4 @@ homebrew_cask_apps:
   - postman
   - temurin8
   - temurin11
+  - openlens
