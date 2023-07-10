@@ -15,7 +15,6 @@ homebrew_installed_packages:
   - jruby
   - zsh
   - zsh-completions
-  - postgresql@15
   - the_silver_searcher
   - tree
   - csshx
@@ -35,6 +34,9 @@ homebrew_installed_packages:
   - nvm
   - awscli
   - postgresql
+  - ntp
+  - lftp
+  - kubernetes-helm
 
 homebrew_cask_apps:
   - iterm2
@@ -44,12 +46,9 @@ homebrew_cask_apps:
   - google-chrome
   - intellij-idea
   - intellij-idea-ce
-  - skype
   - slack
   - spotify
-  - evernote
   - dropbox
-  - microsoft-office
   - xquartz
   - postman
   - temurin8
