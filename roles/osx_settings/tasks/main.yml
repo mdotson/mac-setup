@@ -36,6 +36,15 @@
 - name: change recents view style
   osx_defaults: domain=com.apple.finder key=SearchRecentsSavedViewStyle type=string value=clmv
 
+- name: Read caps lock indicator
+  shell: defaults read /Library/Preferences/FeatureFlags/Domain/UIKit.plist redesigned_text_cursor || echo
+  changed_when: false
+  register: caps_lock_indicator
+
+- name: turn off caps lock indicator
+  command: defaults write /Library/Preferences/FeatureFlags/Domain/UIKit.plist redesigned_text_cursor -dict-add Enabled -bool NO
+  when: "'Enabled = 0' not in caps_lock_indicator.stdout"
+
 - name: Change dock settings
   osx_defaults:
     domain=com.apple.dock
