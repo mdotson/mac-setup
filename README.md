@@ -1,9 +1,9 @@
 # Prerequisites
 ```
+sudo softwareupdate --install-rosetta
 download homebrew
 brew install java
-brew install python
-pip3 install ansible
+brew install ansible
 ansible-galaxy collection install geerlingguy.mac
 ```
 
